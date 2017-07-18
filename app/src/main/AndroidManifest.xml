@@ -16,6 +16,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".EditorActivity"
+            android:label="@string/editor_activity_title_new_patient"
+            android:theme="@style/EditorTheme"
+            android:parentActivityName=".MainActivity" >
+            <!-- Parent activity meta-data -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
     </application>
 
 </manifest>

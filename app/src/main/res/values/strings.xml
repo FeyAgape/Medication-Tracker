@@ -1,3 +1,36 @@
 <resources>
+    <!-- Title for the app [CHAR LIMIT=20] -->
     <string name="app_name">Medication Tracker</string>
+
+    <!-- Label for overflow menu  -->
+    <string name="action_insert_dummy_data">Insert Dummy Data</string>
+    <string name="action_delete_all">Delete All Patients</string>
+
+    <!-- Title for the activity to add a new pet [CHAR LIMIT=20] -->
+    <string name="editor_activity_title_new_patient">Add a Patient</string>
+
+
+    <!-- Labels for editor menu  -->
+    <string name="action_save">Save</string>
+    <string name="action_delete">Delete</string>
+    <string name="overview">Patient Overview</string>
+    <string name="patient_name">Name</string>
+    <string name="patients_gender">Gender</string>
+    <string name="patients_weight">Weight</string>
+    <string name="name_of_patient">Name</string>
+    <string name="health_condition">Medical Condition</string>
+    <string name="number_of_meds">Medications</string>
+    <string name="date_of_next_assessment">Assessment</string>
+    <string name="date_of_next_assessment1">Next Visit</string>
+    <string name="age_of_patient">Age</string>
+    <string name="weight">Measurement</string>
+    <string name="day_unit">Days</string>
+    <string name="weight_unit">Kg</string>
+
+    <!-- Labels for dropdown array menu  -->
+    <string name="gender_unknown">Unknown</string>
+    <string name="gender_male">Male</string>
+    <string name="gender_female">Female</string>
+    <string name="trans_male">Transgender Male</string>
+    <string name="trans_female">Transgender Female</string>
 </resources>
