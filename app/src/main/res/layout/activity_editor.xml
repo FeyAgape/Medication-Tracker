@@ -11,8 +11,8 @@
 
     <!-- Label -->
     <TextView
-        android:text="@string/overview"
-        style="@style/style1" />
+        style="@style/style1"
+        android:text="@string/overview" />
 
     <!-- Overview category -->
     <LinearLayout
@@ -21,39 +21,39 @@
         android:orientation="horizontal">
 
         <TextView
-            android:text="@string/patient_name"
-            style="@style/style2" />
+            style="@style/style2"
+            android:text="@string/patient_name" />
 
         <LinearLayout
-            android:layout_height="wrap_content"
             android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:paddingLeft="4dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingLeft="4dp">
 
             <EditText
                 android:id="@+id/edit_patient_name"
+                style="@style/EditorFieldStyle"
                 android:hint="@string/name_of_patient"
-                android:inputType="textCapWords"
-                style="@style/EditorFieldStyle" />
+                android:inputType="textCapWords" />
 
             <EditText
                 android:id="@+id/edit_patient_condition"
+                style="@style/EditorFieldStyle"
                 android:hint="@string/health_condition"
-                android:inputType="textCapWords"
-                style="@style/EditorFieldStyle" />
+                android:inputType="textCapWords" />
 
             <EditText
-                android:id="@+id/edit_meds"
+                android:id="@+id/edit_medication"
+                style="@style/EditorFieldStyle"
                 android:hint="@string/number_of_meds"
-                android:inputType="textCapWords"
-                style="@style/EditorFieldStyle" />
+                android:inputType="textCapWords" />
 
             <EditText
                 android:id="@+id/edit_age"
+                style="@style/EditorFieldStyle"
                 android:hint="@string/age_of_patient"
-                android:inputType="number"
-                style="@style/EditorFieldStyle" />
+                android:inputType="number" />
 
         </LinearLayout>
     </LinearLayout>
@@ -67,21 +67,21 @@
 
         <!-- Label -->
         <TextView
-            android:text="@string/patients_gender"
-            style="@style/style2" />
+            style="@style/style2"
+            android:text="@string/patients_gender" />
 
         <!-- Input field -->
         <LinearLayout
-            android:layout_height="wrap_content"
             android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="2"
             android:orientation="vertical">
 
             <!-- Gender drop-down spinner -->
             <Spinner
                 android:id="@+id/spinner_gender"
-                android:layout_height="48dp"
                 android:layout_width="wrap_content"
+                android:layout_height="48dp"
                 android:paddingRight="16dp"
                 android:spinnerMode="dropdown"/>
         </LinearLayout>
@@ -96,28 +96,28 @@
 
         <!-- Label -->
         <TextView
-            android:text="@string/weight"
-            style="@style/style2" />
+            style="@style/style2"
+            android:text="@string/weight" />
 
         <!-- Input fields -->
         <RelativeLayout
-            android:layout_height="wrap_content"
             android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="2"
             android:paddingLeft="4dp">
 
             <!-- Weight field -->
             <EditText
                 android:id="@+id/edit_patient_weight"
+                style="@style/EditorFieldStyle"
                 android:hint="@string/patients_weight"
-                android:inputType="number"
-                style="@style/EditorFieldStyle" />
+                android:inputType="number" />
 
             <!-- Units for weight (kg) -->
             <TextView
                 android:id="@+id/label_weight_units"
-                android:text="@string/weight_unit"
-                style="@style/EditorUnitsStyle"/>
+                style="@style/EditorUnitsStyle"
+                android:text="@string/weight_unit" />
         </RelativeLayout>
     </LinearLayout>
 
@@ -129,28 +129,28 @@
 
         <!-- Label -->
         <TextView
-            android:text="@string/date_of_next_assessment1"
-            style="@style/style2" />
+            style="@style/style2"
+            android:text="@string/date_of_next_assessment1" />
 
         <!-- Input fields -->
         <RelativeLayout
-            android:layout_height="wrap_content"
             android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="2"
             android:paddingLeft="4dp">
 
             <!-- Weight field -->
             <EditText
                 android:id="@+id/edit_assessment"
+                style="@style/EditorFieldStyle"
                 android:hint="@string/date_of_next_assessment"
-                android:inputType="number"
-                style="@style/EditorFieldStyle" />
+                android:inputType="number" />
 
             <!-- Units for weight (kg) -->
             <TextView
                 android:id="@+id/label_day_units"
-                android:text="@string/day_unit"
-                style="@style/EditorUnitsStyle"/>
+                style="@style/EditorUnitsStyle"
+                android:text="@string/day_unit" />
         </RelativeLayout>
     </LinearLayout>
 

@@ -42,7 +42,7 @@ public class EditorActivity extends AppCompatActivity {
     private Spinner mGenderSpinner;
 
     /**
-     * Gender of the pet. The possible valid values are in the MedicationContract.java file:
+     * Gender of the patient. The possible valid values are in the MedicationContract.java file:
      * {@link MedicationEntry#GENDER_UNKNOWN}, {@link MedicationEntry#GENDER_MALE},
      * {@link MedicationEntry#GENDER_FEMALE}, {@link MedicationEntry#GENDER_TRANSMALE} or {@link MedicationEntry#GENDER_TRANSFEMALE}.
      */
@@ -56,7 +56,7 @@ public class EditorActivity extends AppCompatActivity {
         // Find all relevant views that we will need to read user input from
         mNameEditText = (EditText) findViewById(R.id.edit_patient_name);
         mConditionEditText = (EditText) findViewById(R.id.edit_patient_condition);
-        mMedicationEditText = (EditText) findViewById(R.id.edit_meds);
+        mMedicationEditText = (EditText) findViewById(R.id.edit_medication);
         mAgeEditText = (EditText) findViewById(R.id.edit_age);
         mWeightEditText = (EditText) findViewById(R.id.edit_patient_weight);
         mAssessmentEditText = (EditText) findViewById(R.id.edit_assessment);
@@ -151,7 +151,7 @@ public class EditorActivity extends AppCompatActivity {
             Toast.makeText(this, "Error with saving patient", Toast.LENGTH_SHORT).show();
         } else {
             // Otherwise, the insertion was successful and we can display a toast with the row ID.
-            Toast.makeText(this, "Patience saved with row id: " + newRowId, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Patient saved with row id: " + newRowId, Toast.LENGTH_SHORT).show();
         }
     }
 

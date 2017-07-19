@@ -12,7 +12,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-
 import com.example.android.medicationtracker.data.MedicationContract.MedicationEntry;
 import com.example.android.medicationtracker.data.MedicationDbHelper;
 
@@ -68,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
                 MedicationEntry.COLUMN_PATIENT_AGE,
                 MedicationEntry.COLUMN_PATIENT_GENDER,
                 MedicationEntry.COLUMN_PATIENT_WEIGHT,
-                MedicationEntry.COLUMN_PATIENT_ASSESSMENT,};
+                MedicationEntry.COLUMN_PATIENT_ASSESSMENT};
 
         // Perform a query on the patient table
         Cursor cursor = db.query(
