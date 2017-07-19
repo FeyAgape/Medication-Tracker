@@ -3,6 +3,7 @@ package com.example.android.medicationtracker.data;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import com.example.android.medicationtracker.data.MedicationContract.MedicationEntry;
 
@@ -40,14 +41,17 @@ public class MedicationDbHelper extends SQLiteOpenHelper {
                 + MedicationEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + MedicationEntry.COLUMN_PATIENT_NAME + " TEXT NOT NULL, "
                 + MedicationEntry.COLUMN_PATIENT_CONDITION + " TEXT NOT NULL, "
-                + MedicationEntry.COLUMN_PATIENT_MEDICATION + "INTEGER NOT NULL DEFAULT 0); "
+                + MedicationEntry.COLUMN_PATIENT_MEDICATION + " INTEGER NOT NULL, "
                 + MedicationEntry.COLUMN_PATIENT_AGE + " INTEGER NOT NULL, "
                 + MedicationEntry.COLUMN_PATIENT_GENDER + " INTEGER NOT NULL, "
-                + MedicationEntry.COLUMN_PATIENT_WEIGHT + " INTEGER NOT NULL DEFAULT 0);"
-                + MedicationEntry.COLUMN_PATIENT_ASSESSMENT + " INTEGER NOT NULL DEFAULT 0); ";
+                + MedicationEntry.COLUMN_PATIENT_WEIGHT + " INTEGER NOT NULL DEFAULT 0, "
+                + MedicationEntry.COLUMN_PATIENT_ASSESSMENT + " INTEGER NOT NULL );";
 
         // Execute the SQL statement
+        Log.v(LOG_TAG, SQL_CREATE_PATIENTS_TABLE);
         db.execSQL(SQL_CREATE_PATIENTS_TABLE);
+
+
     }
 
     /**
@@ -56,5 +60,6 @@ public class MedicationDbHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         // The database is still at version 1, so there's nothing to do be done here.
+
     }
 }

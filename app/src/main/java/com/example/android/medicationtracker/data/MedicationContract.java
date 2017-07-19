@@ -50,7 +50,6 @@ public final class MedicationContract {
 
         /**
          * Age of the patient.
-
          * Type: INTEGER
          */
         public final static String COLUMN_PATIENT_AGE = "age";
