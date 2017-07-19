@@ -33,25 +33,25 @@
 
             <EditText
                 android:id="@+id/edit_patient_name"
-                style="@style/EditorFieldStyle"
+                style="@style/EditTextStyle"
                 android:hint="@string/name_of_patient"
                 android:inputType="textCapWords" />
 
             <EditText
                 android:id="@+id/edit_patient_condition"
-                style="@style/EditorFieldStyle"
+                style="@style/EditTextStyle"
                 android:hint="@string/health_condition"
                 android:inputType="textCapWords" />
 
             <EditText
                 android:id="@+id/edit_medication"
-                style="@style/EditorFieldStyle"
+                style="@style/EditTextStyle"
                 android:hint="@string/number_of_meds"
                 android:inputType="textCapWords" />
 
             <EditText
                 android:id="@+id/edit_age"
-                style="@style/EditorFieldStyle"
+                style="@style/EditTextStyle"
                 android:hint="@string/age_of_patient"
                 android:inputType="number" />
 
@@ -109,7 +109,7 @@
             <!-- Weight field -->
             <EditText
                 android:id="@+id/edit_patient_weight"
-                style="@style/EditorFieldStyle"
+                style="@style/EditTextStyle"
                 android:hint="@string/patients_weight"
                 android:inputType="number" />
 
@@ -142,7 +142,7 @@
             <!-- Weight field -->
             <EditText
                 android:id="@+id/edit_assessment"
-                style="@style/EditorFieldStyle"
+                style="@style/EditTextStyle"
                 android:hint="@string/date_of_next_assessment"
                 android:inputType="number" />
 
