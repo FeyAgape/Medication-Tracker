@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         // To access our database, we instantiate our subclass of SQLiteOpenHelper
         // and pass the context, which is the current activity.
         mDbHelper = new MedicationDbHelper(this);
+        readDatabaseInfo();
     }
 
     @Override
@@ -53,6 +54,35 @@ public class MainActivity extends AppCompatActivity {
      * Helper method to display information in the onscreen TextView about the state of
      * the patient database.
      */
+    private Cursor readDatabaseInfo() {
+        // Create and/or open a database to read from it
+        SQLiteDatabase db = mDbHelper.getReadableDatabase();
+
+        // Define a projection that specifies which columns from the database
+        // you will actually use after this query.
+        String[] projection = {
+                MedicationEntry._ID,
+                MedicationEntry.COLUMN_PATIENT_NAME,
+                MedicationEntry.COLUMN_PATIENT_CONDITION,
+                MedicationEntry.COLUMN_PATIENT_MEDICATION,
+                MedicationEntry.COLUMN_PATIENT_AGE,
+                MedicationEntry.COLUMN_PATIENT_GENDER,
+                MedicationEntry.COLUMN_PATIENT_WEIGHT,
+                MedicationEntry.COLUMN_PATIENT_ASSESSMENT};
+
+        // Perform a query on the patient table
+        Cursor cursor = db.query(
+                MedicationEntry.TABLE_NAME,   // The table to query
+                projection,            // The columns to return
+                null,                  // The columns for the WHERE clause
+                null,                  // The values for the WHERE clause
+                null,                  // Don't group the rows
+                null,  //// Don't filter by row groups
+                null);                   // The sort order
+        // Reads method then returns a cursor
+        return cursor;
+    }
+
     private void displayDatabaseInfo() {
         // Create and/or open a database to read from it
         SQLiteDatabase db = mDbHelper.getReadableDatabase();
@@ -78,7 +108,6 @@ public class MainActivity extends AppCompatActivity {
                 null,                  // Don't group the rows
                 null,  //// Don't filter by row groups
                 null);                   // The sort order
-
 
         TextView displayView = (TextView) findViewById(R.id.text_view_patients);
 
