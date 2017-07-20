@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Temporary helper method to display information in the onscreen TextView about the state of
+     * Helper method to display information in the onscreen TextView about the state of
      * the patient database.
      */
     private void displayDatabaseInfo() {
@@ -78,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
                 null,                  // Don't group the rows
                 null,  //// Don't filter by row groups
                 null);                   // The sort order
+
 
         TextView displayView = (TextView) findViewById(R.id.text_view_patients);
 
